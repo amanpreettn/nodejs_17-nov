@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <style type="text/css" media="screen">
+      body {
+        background-color: skyblue;
+        text-decoration-color: white;
+        font-size: 2em;
+        list-style: none;
+      }
+      button {
+        background-color: gold;
+        padding: 5px;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <!-- <% data.forEach((item)=>{%>
+            <li><%=item%></li>
+            <%});%> -->
+
+      <% data.forEach((item)=>{%>
+      <li>
+        <%=item.name %>
+        <a class="btn btn-danger" href="/delete/<%=item.id%>">Delete</a>
+      </li>
+      <%}); %>
+    </ul>
+  </body>
+</html>
